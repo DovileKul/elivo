@@ -12,17 +12,19 @@
 <body>
   <div class="container">
       <header>
+        <div class="container">
           <div class="logo">Elivo</div>
           <div class="nav-links">
-              <a href="#" class="active">Home</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Projects</a>
+              <a href="#home" class="active">Home</a>
+              <a href="#about">About</a>
+              <a href="#services">Services</a>
+              <a href="#projects">Projects</a>
           </div>
-          <button class="contact-btn">Contact</button>
+          <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView()">Contact</button>
+        </div>
       </header>
       
-      <section class="hero">
+      <section id="home" class="hero">
           <div class="hero-content">
               <h1>Designing clarity and content for small brands. I turn your vision into beautiful, meaningful digital spaces.</h1>
               <button class="contact-btn">See My Work</button>
@@ -32,37 +34,28 @@
           </div>
       </section>
       
-      <section class="about">
-        <h2>About Me</h2>
-        <div class="about-grid">
-            <div class="about-card">
-                <img src="img/paint2.jpg" alt="About me texture">
-                <div class="quote-bubble">
-                    I'm a UX/UI designer based in Lithuania
-                </div>
-            </div>
-            <div class="about-card">
-                <img src="img/paint2.jpg" alt="About me texture">
-                <div class="quote-bubble">
-                    I love working with small businesses to create beautiful digital experiences
-                </div>
-            </div>
-            <div class="about-card">
-                <img src="img/paint2.jpg" alt="About me texture">
-                <div class="quote-bubble">
-                    Every day I strive to learn and grow as a designer
-                </div>
-            </div>
-            <div class="about-card">
-                <img src="img/paint2.jpg" alt="About me texture">
-                <div class="quote-bubble">
-                    Let's create something together
-                </div>
-            </div>
+      <section id="about" class="about">
+        <h2>About</h2>
+        <div class="about-content-wrapper">
+        <div class="about-image">
+            <img src="img/paint2.jpg" width="500" height="300" alt="Design texture">
+        </div>
+        <div class="about-content">
+            <p><strong>I’m Dovilė — the designer behind Elivo Studio.</strong>
+                I help small, conscious brands bring their essence to life through calm, clear, 
+                and beautifully intuitive design.
+                With a background in UX/UI and front-end design, 
+                I focus on creating digital spaces that feel both elegant and human. 
+                Whether it's a brand refresh or a full website experience, 
+                I believe in visuals that breathe and communicate clearly.<br><br>
+                <strong>Let’s create something meaningful, together.</strong>
+            </p>
+        </div>
         </div>
     </section>
       
-      <section class="pricing">
+      <section id="services" class="pricing">
+        <h2>Services</h2>
           <div class="pricing-grid">
               <div class="pricing-card">
                   <h3>Starter</h3>
@@ -114,30 +107,73 @@
           </div>
       </section>
       
-      <section class="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card" onclick="openProjectModal('mobile-app')">
-                <img src="img/project1.png" alt="Mobile App Project">
-                <div class="project-overlay">
-                    <h3>NFC DEV | Logo & User Guide</h3>
-                    <p>UX/UI Design</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.inf.nfc" target="_blank" class="overlay-button"></a>
+ 
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="img/project1.png" alt="NFC DEV Logo & User Guide">
+            </div>
+            <div class="project-info">
+                <h3>NFC DEV | Logo & User Guide</h3>
+                <p>UX/UI Design</p>
+                <div class="project-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.inf.nfc" class="btn-live">Live</a>
                 </div>
             </div>
-    </section>
-      
-      <section class="contact">
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="img/project2.png" alt="Dentica Dental Clinic Website">
+            </div>
+            <div class="project-info">
+                <h3>Dentica | Dental Clinic</h3>
+                <p>UX/UI & Development</p>
+                <div class="project-buttons">
+                    <a href="https://dovilekul.github.io/dentica-website/" class="btn-live">Live</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="img/project3.png" alt="Little Lemon Restaurant Website">
+            </div>
+            <div class="project-info">
+                <h3>Little Lemon Restaurant</h3>
+                <p>UX/UI & Development</p>
+                <div class="project-buttons">
+                    <a href="https://dovilekul.github.io/little-lemon-webapp/" class="btn-live">Live</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="img/project4.png" alt="Skincare Landing Page">
+            </div>
+            <div class="project-info">
+                <h3>Skincare Landing Page</h3>
+                <p>UI Design</p>
+                <div class="project-buttons">
+                    <a href="https://www.figma.com/proto/3CfyO40zb5zX5cNWNzqmTO/Derma-Skincare-Landing-Page?node-id=1-2&p=f&t=4rmt7YInIxF3lcDc-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="btn-live">Live</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+      <section id="contact" class="contact">
           <div class="contact-info">
               <h2>Elivo</h2>
               <div class="social-links">
                 <a href="https://www.instagram.com/elivo_studio/" class="social-link">IG</a>
-                <a href="mailto:your@email.com" class="social-link">@</a>
+                <a href="mailto:info.elivo@gmail.com" class="social-link">@</a>
             </div>
         </div>
           <div class="contact-form">
               <h3>Let's connect</h3>
               <p>Tell me about your project - I'll get back to you.</p>
+              <form id="contactForm" action="process_form.php" method="POST">
               <form>
                   <div class="form-group">
                       <input type="email" class="form-control" placeholder="Your email address">
@@ -152,19 +188,21 @@
   </div>
 
 <script>
-  function openProjectModal(projectId) {
-      document.getElementById(projectId + '-modal').style.display = 'block';
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
   
-  function closeModal(modalId) {
-      document.getElementById(modalId).style.display = 'none';
+  function changeActiveLink() {
+    let index = sections.length;
+    
+    while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+    
+    navLinks.forEach((link) => link.classList.remove('active'));
+    navLinks[index].classList.add('active');
   }
-  
-  window.onclick = function(event) {
-      if (event.target.classList.contains('modal')) {
-          event.target.style.display = 'none';
-      }
-  }
+  window.addEventListener('scroll', changeActiveLink);
+  changeActiveLink();
+});
 </script>
 
 </body>
